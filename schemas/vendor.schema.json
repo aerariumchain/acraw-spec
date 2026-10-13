@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerariumchain.github.io/acraw-spec/schemas/0.1/vendor.schema.json",
+  "title": "AerariumChain Raw L0 vendor descriptor",
+  "type": "object",
+  "required": [
+    "vendor_id",
+    "packaging"
+  ],
+  "properties": {
+    "vendor_id": {
+      "type": "string"
+    },
+    "software": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "packaging": {
+      "enum": [
+        "files",
+        "kv-export",
+        "archive"
+      ]
+    },
+    "original_root": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "extras": {
+      "type": "object"
+    }
+  }
+}

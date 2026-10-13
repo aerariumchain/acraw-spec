@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerariumchain.github.io/acraw-spec/schemas/0.1/poses.schema.json",
+  "title": "AerariumChain Raw poses",
+  "type": "object",
+  "required": [
+    "poses"
+  ],
+  "properties": {
+    "poses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "capture",
+          "matrix",
+          "source"
+        ],
+        "properties": {
+          "capture": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+          },
+          "matrix": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 16,
+            "maxItems": 16
+          },
+          "source": {
+            "enum": [
+              "vendor",
+              "imported"
+            ]
+          },
+          "covariance": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number"
+            },
+            "minItems": 36,
+            "maxItems": 36
+          },
+          "notes": {
+            "type": "string"
+          },
+          "extras": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

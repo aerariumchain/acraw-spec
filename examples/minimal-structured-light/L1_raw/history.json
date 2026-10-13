@@ -1,0 +1,154 @@
+{
+  "events": [
+    {
+      "seq": 1,
+      "timestamp": "2026-10-13T08:01:00Z",
+      "op": "create",
+      "target": "f0001"
+    },
+    {
+      "seq": 2,
+      "timestamp": "2026-10-13T08:01:02Z",
+      "op": "create",
+      "target": "f0002"
+    },
+    {
+      "seq": 3,
+      "timestamp": "2026-10-13T08:01:04Z",
+      "op": "create",
+      "target": "f0003"
+    },
+    {
+      "seq": 4,
+      "op": "set_pose",
+      "target": "f0001",
+      "data": {
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "seq": 5,
+      "op": "set_pose",
+      "target": "f0002",
+      "data": {
+        "matrix": [
+          1,
+          0,
+          0,
+          1.4,
+          0,
+          1,
+          0,
+          0.1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "seq": 6,
+      "op": "set_pose",
+      "target": "f0003",
+      "data": {
+        "matrix": [
+          1,
+          0,
+          0,
+          3.0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "seq": 7,
+      "op": "reparent",
+      "target": "f0001",
+      "data": {
+        "parent": "group-a"
+      }
+    },
+    {
+      "seq": 8,
+      "op": "reparent",
+      "target": "f0002",
+      "data": {
+        "parent": "group-a"
+      }
+    },
+    {
+      "seq": 9,
+      "op": "reparent",
+      "target": "f0003",
+      "data": {
+        "parent": "group-a"
+      }
+    },
+    {
+      "seq": 10,
+      "timestamp": "2026-10-13T08:03:00Z",
+      "op": "set_pose",
+      "target": "f0002",
+      "data": {
+        "matrix": [
+          1,
+          0,
+          0,
+          1.5,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "note": "fine registration"
+      }
+    },
+    {
+      "seq": 11,
+      "timestamp": "2026-10-13T08:04:00Z",
+      "op": "delete",
+      "target": "f0003"
+    }
+  ]
+}

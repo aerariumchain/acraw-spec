@@ -1,0 +1,10 @@
+{
+  "vendor_id": "examplevendor",
+  "software": {
+    "name": "Example Studio",
+    "version": "1.0"
+  },
+  "packaging": "files",
+  "original_root": "ExampleProject",
+  "notes": "Synthetic placeholder: a real archive holds the original project files byte for byte."
+}

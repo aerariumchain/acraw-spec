@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerariumchain.github.io/acraw-spec/schemas/0.1/sensors.schema.json",
+  "title": "AerariumChain Raw sensors",
+  "type": "object",
+  "required": [
+    "sensors"
+  ],
+  "properties": {
+    "sensors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+          },
+          "kind": {
+            "enum": [
+              "camera",
+              "projector",
+              "structured_light_rig",
+              "laser_line",
+              "tls",
+              "lidar",
+              "imu",
+              "gnss",
+              "ct_source",
+              "ct_detector",
+              "other"
+            ]
+          },
+          "make": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "serial": {
+            "type": "string"
+          },
+          "firmware": {
+            "type": "string"
+          },
+          "rig": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+          },
+          "sensor_to_rig": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 16,
+            "maxItems": 16
+          },
+          "intrinsics": {
+            "type": "object",
+            "required": [
+              "model"
+            ],
+            "properties": {
+              "model": {
+                "enum": [
+                  "pinhole",
+                  "opencv",
+                  "opencv_fisheye",
+                  "spherical",
+                  "unknown"
+                ]
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "fx": {
+                "type": "number"
+              },
+              "fy": {
+                "type": "number"
+              },
+              "cx": {
+                "type": "number"
+              },
+              "cy": {
+                "type": "number"
+              },
+              "distortion": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "calibration": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "enum": [
+                  "factory",
+                  "field",
+                  "self_calibrated",
+                  "unknown"
+                ]
+              },
+              "date": {
+                "type": "string"
+              }
+            }
+          },
+          "notes": {
+            "type": "string"
+          },
+          "extras": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

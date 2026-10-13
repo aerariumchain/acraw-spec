@@ -1,0 +1,41 @@
+{
+  "id": "f0002",
+  "kind": "range_grid",
+  "sensors": [
+    "head",
+    "head.tex"
+  ],
+  "timestamp": "2026-10-13T08:01:02Z",
+  "status": "active",
+  "grid": {
+    "width": 4,
+    "height": 4
+  },
+  "payloads": [
+    {
+      "role": "geometry",
+      "path": "mesh.ply"
+    },
+    {
+      "role": "texture",
+      "path": "texture.png",
+      "sensor": "head.tex"
+    }
+  ],
+  "ply_properties": {
+    "grid_index": "row-major sensor grid cell (spec 6.3.2)"
+  },
+  "vendor_properties": {
+    "name": "frame_f0002"
+  },
+  "vendor_raw_properties": [
+    {
+      "id": "0x0000002a",
+      "encoding": "hex",
+      "value": "01000000"
+    }
+  ],
+  "vendor_metrics": {
+    "quality": 0.88
+  }
+}

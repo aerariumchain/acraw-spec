@@ -1,0 +1,173 @@
+{
+  "acraw_version": "0.1",
+  "id": "urn:uuid:3f1c2b6e-0d7a-4c49-9a0e-6b9f1e2d4c00",
+  "title": "Synthetic structured-light example",
+  "created": "2026-10-13T09:00:00Z",
+  "profile": "full",
+  "units": {
+    "length": "mm"
+  },
+  "coordinate_system": {
+    "handedness": "right",
+    "up_axis": "+Z",
+    "crs": null
+  },
+  "derived_from": null,
+  "files": [
+    {
+      "path": "L0_vendor/examplevendor/files/ExampleProject/project.txt",
+      "size": 33,
+      "sha256": "93df2776a6787e7087f9b7d7ff502a920a8a319e4042b7891ef24ca2ed1a057b",
+      "layer": "L0",
+      "media_type": "text/plain"
+    },
+    {
+      "path": "L0_vendor/examplevendor/vendor.json",
+      "size": 268,
+      "sha256": "5fc6d051975cbbbc3802535c20d95c606031a7f47ad14e233ca590582493518e",
+      "layer": "L0",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/captures/f0001/capture.json",
+      "size": 692,
+      "sha256": "a9780e0befef91f22062be794cb2d2b39c80972f7fec1097b19f8ae1eeb603f7",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/captures/f0001/mesh.ply",
+      "size": 819,
+      "sha256": "32825547b75bbcb2f245ed918388c39f08c789dd5278b9852bf0a333cb38fa80",
+      "layer": "L1",
+      "media_type": "application/x-ply"
+    },
+    {
+      "path": "L1_raw/captures/f0001/texture.png",
+      "size": 181,
+      "sha256": "445bc4cda9ab4ddcadaa1c2eef62ebabc4496e88e66bf10e041cc6cc7ad11a09",
+      "layer": "L1",
+      "media_type": "image/png"
+    },
+    {
+      "path": "L1_raw/captures/f0002/capture.json",
+      "size": 692,
+      "sha256": "1bbecdbfdca42cca4b92c3e1ea0975f6bff48b0bffd3f2ece9be7d8217be0d49",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/captures/f0002/mesh.ply",
+      "size": 793,
+      "sha256": "a4d5dca57289ecce3832854e54830a5516770f33968b28b36adcf438307f98de",
+      "layer": "L1",
+      "media_type": "application/x-ply"
+    },
+    {
+      "path": "L1_raw/captures/f0002/texture.png",
+      "size": 181,
+      "sha256": "445bc4cda9ab4ddcadaa1c2eef62ebabc4496e88e66bf10e041cc6cc7ad11a09",
+      "layer": "L1",
+      "media_type": "image/png"
+    },
+    {
+      "path": "L1_raw/captures/f0003/capture.json",
+      "size": 646,
+      "sha256": "8179ce5f645fe478f14c17f6c748a28ed54187c00cc6b1f7128b19cf46f04b6a",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/captures/f0003/mesh.ply",
+      "size": 588,
+      "sha256": "ba0466fb2a4634600991fe056c0074b1daf6d9a39eeb22c04a54242d88000384",
+      "layer": "L1",
+      "media_type": "application/x-ply"
+    },
+    {
+      "path": "L1_raw/captures/f0003/texture.png",
+      "size": 181,
+      "sha256": "445bc4cda9ab4ddcadaa1c2eef62ebabc4496e88e66bf10e041cc6cc7ad11a09",
+      "layer": "L1",
+      "media_type": "image/png"
+    },
+    {
+      "path": "L1_raw/history.json",
+      "size": 2329,
+      "sha256": "e79a38a45a4df32d1b90b59518586297808b9270057d25bc1d532d16f10ee4ce",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/poses.json",
+      "size": 900,
+      "sha256": "425961dd3245d2f6e93d90ab38e848447a3f6990f6eb936e47408d5c8778171a",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/scene.json",
+      "size": 384,
+      "sha256": "e3acf70cadc6c2a04fe8a7cf651c6d39ffaffc8cf5f3f9581ad773656610adcc",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L1_raw/sensors.json",
+      "size": 615,
+      "sha256": "8c5c64f59eee3f2a75d328aecb1de5f4a0689dacca6dfe1ab1cd854f903061e1",
+      "layer": "L1",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L2_derived/fusion-01/fused.ply",
+      "size": 893,
+      "sha256": "acca85805efa8e848f3ceef72bd77e8c89ebb3bdb49467ab6f5e413f0f5df2d9",
+      "layer": "L2",
+      "media_type": "application/x-ply"
+    },
+    {
+      "path": "L2_derived/fusion-01/product.json",
+      "size": 375,
+      "sha256": "1b201760c4b0652e276a6db735bdd2f4db93048a5c45d205bedc8be239511295",
+      "layer": "L2",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L2_derived/qc-01/product.json",
+      "size": 345,
+      "sha256": "104d0d8be5db980c00beda5a23139fdc11bdf9f4687e71b4f16855d73577b86b",
+      "layer": "L2",
+      "media_type": "application/json"
+    },
+    {
+      "path": "L2_derived/qc-01/report.json",
+      "size": 233,
+      "sha256": "323071b5ebb2c01df2f29ea22b94f3ba067046e87cc46059a0b802ea690c6706",
+      "layer": "L2",
+      "media_type": "application/json"
+    },
+    {
+      "path": "preview/thumbnail.png",
+      "size": 7862,
+      "sha256": "eb3b97fef3871f14b77938622aa1a7b17c75c44eca6519395ed3d28eb1d711a3",
+      "layer": "preview",
+      "media_type": "image/png"
+    },
+    {
+      "path": "provenance.json",
+      "size": 725,
+      "sha256": "c768758eeaafc84d5bff61b3f00a2fa0bab9ed421ed0b7e6dad134bad1144cde",
+      "layer": "meta",
+      "media_type": "application/json"
+    }
+  ],
+  "root_hash": {
+    "algorithm": "acraw-root-sha256-v1",
+    "value": "b67ef516a68e30b4db45cb72b4f28b4287c833ffae6b73b419326d0053048d50"
+  },
+  "writer": {
+    "name": "acraw-spec/make_example.py",
+    "version": "0.1"
+  }
+}

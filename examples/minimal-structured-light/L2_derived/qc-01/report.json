@@ -1,0 +1,13 @@
+{
+  "frames": [
+    {
+      "capture": "f0001",
+      "registration_error_mm": 0.21
+    },
+    {
+      "capture": "f0002",
+      "registration_error_mm": 0.34
+    }
+  ],
+  "method": "mean distance of sampled vertices to fusion-01"
+}

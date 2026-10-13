@@ -1,0 +1,21 @@
+name: validate
+
+on: [push, pull_request]
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/requirements-optional.txt
+      - name: Example is reproducible
+        run: |
+          python3 tools/make_example.py
+          git diff --exit-code -- examples/minimal-structured-light
+      - name: Packed and directory forms are valid
+        run: |
+          python3 tools/acraw_validate.py examples/minimal-structured-light.acraw
+          python3 tools/acraw_validate.py examples/minimal-structured-light

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerariumchain.github.io/acraw-spec/schemas/0.1/anchors.schema.json",
+  "title": "AerariumChain Raw anchors",
+  "type": "object",
+  "required": [
+    "anchors"
+  ],
+  "properties": {
+    "anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "service",
+          "reference",
+          "root_hash"
+        ],
+        "properties": {
+          "service": {
+            "type": "string"
+          },
+          "network": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "root_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "anchored_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

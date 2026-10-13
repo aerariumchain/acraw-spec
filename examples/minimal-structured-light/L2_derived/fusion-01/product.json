@@ -1,0 +1,25 @@
+{
+  "id": "fusion-01",
+  "kind": "fused_mesh",
+  "inputs": {
+    "captures": [
+      "f0001",
+      "f0002"
+    ],
+    "products": []
+  },
+  "software": {
+    "name": "Example Studio",
+    "version": "1.0"
+  },
+  "parameters": {
+    "resolution_mm": 1.0
+  },
+  "created": "2026-10-13T08:05:00Z",
+  "files": [
+    {
+      "role": "mesh",
+      "path": "fused.ply"
+    }
+  ]
+}

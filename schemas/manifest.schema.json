@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerariumchain.github.io/acraw-spec/schemas/0.1/manifest.schema.json",
+  "title": "AerariumChain Raw manifest",
+  "type": "object",
+  "required": [
+    "acraw_version",
+    "id",
+    "created",
+    "profile",
+    "units",
+    "coordinate_system",
+    "files",
+    "root_hash",
+    "writer"
+  ],
+  "properties": {
+    "acraw_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^urn:uuid:[0-9a-fA-F-]{36}$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "profile": {
+      "enum": [
+        "full",
+        "distribution"
+      ]
+    },
+    "units": {
+      "type": "object",
+      "required": [
+        "length"
+      ],
+      "properties": {
+        "length": {
+          "enum": [
+            "mm",
+            "m"
+          ]
+        }
+      }
+    },
+    "coordinate_system": {
+      "type": "object",
+      "required": [
+        "handedness"
+      ],
+      "properties": {
+        "handedness": {
+          "const": "right"
+        },
+        "up_axis": {
+          "enum": [
+            "+X",
+            "-X",
+            "+Y",
+            "-Y",
+            "+Z",
+            "-Z"
+          ]
+        },
+        "crs": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^EPSG:[0-9]+$"
+        }
+      }
+    },
+    "derived_from": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "id",
+        "root_hash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "root_hash": {
+          "type": "string"
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "size",
+          "sha256",
+          "layer"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "layer": {
+            "enum": [
+              "meta",
+              "L0",
+              "L1",
+              "L2",
+              "preview",
+              "extension"
+            ]
+          }
+        }
+      }
+    },
+    "root_hash": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "acraw-root-sha256-v1"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "writer": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
+    "extras": {
+      "type": "object"
+    }
+  }
+}

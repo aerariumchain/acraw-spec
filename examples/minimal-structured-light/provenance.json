@@ -1,0 +1,37 @@
+{
+  "subject": {
+    "type": "test_object",
+    "title": "Synthetic plate",
+    "identifiers": [
+      {
+        "scheme": "example",
+        "value": "0001"
+      }
+    ]
+  },
+  "acquisition": {
+    "organization": "Example lab",
+    "operator": "operator",
+    "start": "2026-10-13T08:00:00Z",
+    "end": "2026-10-13T08:05:00Z"
+  },
+  "software": [
+    {
+      "name": "Example Studio",
+      "version": "1.0",
+      "role": "acquisition"
+    }
+  ],
+  "conversions": [
+    {
+      "tool": "acraw-spec/make_example.py",
+      "version": "0.1",
+      "from": "synthetic data",
+      "date": "2026-10-13T09:00:00Z"
+    }
+  ],
+  "rights": {
+    "rights_holder": "AerariumChain Raw contributors",
+    "license": "CC0-1.0"
+  }
+}

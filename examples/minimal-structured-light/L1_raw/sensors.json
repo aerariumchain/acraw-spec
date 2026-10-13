@@ -1,0 +1,41 @@
+{
+  "sensors": [
+    {
+      "id": "head",
+      "kind": "structured_light_rig",
+      "make": "ExampleScan",
+      "model": "Model S",
+      "serial": "SN-0001",
+      "calibration": {
+        "source": "factory",
+        "date": "2026-01-15"
+      }
+    },
+    {
+      "id": "head.tex",
+      "kind": "camera",
+      "rig": "head",
+      "sensor_to_rig": [
+        1,
+        0,
+        0,
+        12.5,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intrinsics": {
+        "model": "unknown"
+      }
+    }
+  ]
+}

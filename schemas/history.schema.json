@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aerariumchain.github.io/acraw-spec/schemas/0.1/history.schema.json",
+  "title": "AerariumChain Raw history",
+  "type": "object",
+  "required": [
+    "events"
+  ],
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "seq",
+          "op",
+          "target"
+        ],
+        "properties": {
+          "seq": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "author": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "op": {
+            "enum": [
+              "create",
+              "delete",
+              "set_pose",
+              "set_property",
+              "reparent",
+              "set_payload",
+              "other"
+            ]
+          },
+          "target": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          },
+          "extras": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

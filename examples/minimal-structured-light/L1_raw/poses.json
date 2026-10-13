@@ -1,0 +1,73 @@
+{
+  "poses": [
+    {
+      "capture": "f0001",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": "vendor",
+      "covariance": null
+    },
+    {
+      "capture": "f0002",
+      "matrix": [
+        1,
+        0,
+        0,
+        1.5,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": "vendor",
+      "covariance": null
+    },
+    {
+      "capture": "f0003",
+      "matrix": [
+        1,
+        0,
+        0,
+        3.0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": "vendor",
+      "covariance": null
+    }
+  ]
+}
